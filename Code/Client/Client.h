@@ -14,14 +14,18 @@ using TcpClients = std::vector<TcpClientPtr>;
 const sf::IpAddress SERVER_IP("127.0.0.1");
 constexpr int SERVER_TCP_PORT(53000);
 
-void client() { ; }
-bool connect(TcpClient& socket) { return false; }
-void input(TcpClient& socket) { ; }
+
 
 class Client
 {
 public:
 	Client();
 	~Client();
+
+	void client();
+	bool connect(TcpClient& socket);
+	void input(TcpClient& socket);
+
+
 };
 

@@ -24,7 +24,7 @@
     <ClInclude Include="targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\TronClientW32\Server.h">
+    <ClInclude Include="..\..\Code\Server\Server.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -35,7 +35,7 @@
     <ClCompile Include="..\..\Code\Server\TronServerW32.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\TronClientW32\Server.cpp">
+    <ClCompile Include="..\..\Code\Server\Server.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
