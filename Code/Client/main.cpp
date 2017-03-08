@@ -17,11 +17,11 @@ int main()
 				window.close();
 		}
 
-		if (sf::Keyboard::isKeyPressed(sf::Keyboard::A))
+		/*if (sf::Keyboard::isKeyPressed(sf::Keyboard::A))
 		{
 			client.input();
-		}
-
+		}*/
+		client.client();
 		window.clear();
 		window.draw(shape);
 		window.display();

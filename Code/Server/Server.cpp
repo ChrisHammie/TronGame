@@ -1,7 +1,6 @@
 #include "Server.h"
 
 
-
 Server::Server()
 {
 }
@@ -53,7 +52,7 @@ void Server::connect(sf::TcpListener & tcp_listener, sf::SocketSelector & select
 	auto& client_ref = *client_ptr;
 	if (tcp_listener.accept(client_ref) == sf::Socket::Done)
 	{
-		
+		std::cout << "Client connected" << std::endl;
 		selector.add(client_ref);
 		tcp_clients.push_back(std::move(client_ptr));
 	}

@@ -15,19 +15,19 @@ int main()
 	//Server* server = new Server();
 	std::unique_ptr<Server> server;
 	std::cout << "Searching for life signs...";
-	TronGame game;
+	//TronGame game;
 	while (true)
 	{
 		//std::cin.get();
 		server->runServer();
 	}
 
-	sf::Packet outPacket;
+	/*sf::Packet outPacket;
 	outPacket << game;
 	port.send(packet);
 
 	port.receive(packet);
-	packet >> game;
+	packet >> game;*/
     return 0;
 }
 

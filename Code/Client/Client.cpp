@@ -45,7 +45,7 @@ void Client::client()
 	return input(socket);
 }
 
-bool Client::connect(TcpClient & socket)
+bool Client::connect(TcpClient& socket)
 {
 	// attempt connection to server
 	auto status = socket.connect(SERVER_IP, SERVER_TCP_PORT);
