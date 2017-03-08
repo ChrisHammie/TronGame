@@ -10,5 +10,7 @@ public:
 	~TronGame() = default;
 
 	friend sf::Packet& operator <<(sf::Packet& packet, const TronGame& game);
-	friend sf::Packet& operator >>(sf::Packet& packet, const TronGame& game);
+	friend sf::Packet& operator >>(sf::Packet& packet, TronGame& game);
+
+	int numberOfPlayers;
 };

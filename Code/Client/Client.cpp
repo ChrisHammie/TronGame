@@ -20,7 +20,6 @@ void Client::client()
 		return;
 	}
 
-	
 	auto handle = std::async(std::launch::async, [&]
 	{
 		// keep track of the socket status
@@ -35,9 +34,9 @@ void Client::client()
 				std::string packetStore;
 				packet >> packetStore;
 
-				std::cout << packetStore;
+				//std::cout << packetStore;
 
-				std::cout << std::endl;
+				//std::cout << std::endl;
 
 			}
 		} while (status != sf::Socket::Disconnected);
@@ -55,12 +54,22 @@ bool Client::connect(TcpClient & socket)
 		return false;
 	}
 	// if it works
-	std::cout << "Connected to server: " << SERVER_IP;
-	std::cout << std::endl;
+	//std::cout << "Connected to server: " << SERVER_IP;
+	//std::cout << std::endl;
 	return true;
 }
 
 void Client::input(TcpClient & socket)
 {
-	while (true)	{		auto& sender_ref = socket;		sf::Packet packet;		std::string message;		std::getline(std::cin, message);		packet << message;		socket.send(packet);	}
+	//while (false)
+	//{
+	//	auto& sender_ref = socket;
+	//	sf::Packet packet;
+	//	//std::string message;
+
+	//	//std::getline(std::cin, message);
+	////	packet << message;
+
+	//	socket.send(packet);
+	//}
 }

@@ -21,6 +21,7 @@ bool Server::bindServerPort(sf::TcpListener& listener)
 
 		return false;
 	}
+	
 	return true;
 }
 
@@ -30,6 +31,7 @@ void Server::listen(sf::TcpListener & tcp_listener, sf::SocketSelector & selecto
 	{
 		if (selector.wait())
 		{
+			
 			//new connection request
 			if (selector.isReady(tcp_listener))
 			{
@@ -51,6 +53,7 @@ void Server::connect(sf::TcpListener & tcp_listener, sf::SocketSelector & select
 	auto& client_ref = *client_ptr;
 	if (tcp_listener.accept(client_ref) == sf::Socket::Done)
 	{
+		
 		selector.add(client_ref);
 		tcp_clients.push_back(std::move(client_ptr));
 	}
